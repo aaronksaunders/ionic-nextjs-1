@@ -1,6 +1,6 @@
-# Hello World example
+# Hello World Example, with Ionic Integrated
 
-# Making Ionic Work
+## Making Ionic Work
 I had to include - https://github.com/Yonom/ionic the default ionic did not work, was still throwing errors.
 
 ```
