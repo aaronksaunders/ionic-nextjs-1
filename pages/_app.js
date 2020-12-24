@@ -18,7 +18,7 @@ import "@ionic/react/css/text-transformation.css";
 import "@ionic/react/css/flex-utils.css";
 import "@ionic/react/css/display.css";
 
-import { Menu } from "./components/Menu";
+import { Menu } from "../components/Menu";
 
 const MyApp = ({ Component, pageProps }) => {
   console.log("hi");
