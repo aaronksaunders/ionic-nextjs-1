@@ -19,10 +19,11 @@ export default function AboutPage() {
           </IonButtons>
         </IonToolbar>
       </IonHeader>
-      <IonContent>
+
+      <IonContent className="ion-padding">
         <IonCard>
           <IonCardContent>
-            <div>About us</div>
+            <div>Settings</div>
           </IonCardContent>
         </IonCard>
       </IonContent>
