@@ -13,6 +13,14 @@ import {
 import { trash, share, close } from "ionicons/icons";
 export default function IndexPage() {
   const [show, setShow] = useState(false);
+
+  const testPost = async () => {
+    const resp = await fetch("/api/login", {
+      method: "POST",
+      body: JSON.stringify({ name: "Aaron", password: "pass123" }),
+    });
+    console.log(await resp.json());
+  };
   return (
     <IonPage id="main-content">
       <IonHeader>
@@ -24,13 +32,21 @@ export default function IndexPage() {
       </IonHeader>
 
       <IonContent className="ion-padding">
-        Hello World.{" "}
-        <Link href="/about">
-          <a>About</a>
-        </Link>
+        <div className="ion-padding">
+          <h3>Hello World - Ionic Framework with NextJS</h3>
+          <div>
+            Testing using the "Link" Component&nbsp;&nbsp;
+            <Link href="/about">
+              <a>About</a>
+            </Link>
+          </div>
+        </div>
         <div>
           <IonButton onClick={() => setShow(true)} expand="block">
-            Show Alert
+            Show Actionsheet
+          </IonButton>
+          <IonButton onClick={() => testPost()} expand="block">
+            Post
           </IonButton>
           <IonActionSheet
             isOpen={show}
